@@ -1,62 +1,78 @@
-function CreateCustomer() {
+function CreateCustomerForm() {
   return (
-    <section class="bg-gray-2 rounded-xl">
-      <div class="p-8 shadow-lg">
-        <form class="space-y-4">
-          <div class="w-full">
-            <label class="sr-only" for="name">
-              Name
-            </label>
-            <input
-              class="input input-solid max-w-full"
-              placeholder="Name"
-              type="text"
-              id="name"
-            />
-          </div>
-
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <section className="bg-gray-2 rounded-xl border border-slate-700">
+      <div className="p-8 shadow-lg">
+        <form className="space-y-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label class="sr-only" for="email">
-                Email
+              <label className="sr-only" htmlFor="phone">
+                Customer Phone Number
               </label>
               <input
-                class="input input-solid"
-                placeholder="Email address"
-                type="email"
-                id="email"
-              />
-            </div>
-
-            <div>
-              <label class="sr-only" for="phone">
-                Phone
-              </label>
-              <input
-                class="input input-solid"
-                placeholder="Phone Number"
+                className="input input-solid max-w-full"
+                placeholder="Enter Customer Number"
                 type="tel"
                 id="phone"
               />
             </div>
+
+            <div>
+              <label className="sr-only" htmlFor="initial">
+                Title
+              </label>
+              <select className="input input-solid max-w-full" id="initial">
+                <option value="">Select Title</option>
+                <option value="Mr">Mr.</option>
+                <option value="Ms">Ms.</option>
+                <option value="Mrs">Mrs.</option>
+              </select>
+            </div>
           </div>
 
-          <div class="w-full">
-            <label class="sr-only" for="message">
-              Message
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label className="sr-only" htmlFor="name">
+                Customer Name
+              </label>
+              <input
+                className="input input-solid max-w-full"
+                placeholder="Enter Customer Name"
+                type="text"
+                id="name"
+              />
+            </div>
+
+            <div>
+              <label className="sr-only" htmlFor="registered-date">
+                Registered Date
+              </label>
+              <input
+                className="input input-solid max-w-full"
+                placeholder="Select Registered Date"
+                type="date"
+                id="registered-date"
+              />
+            </div>
+          </div>
+
+          <div className="w-full">
+            <label className="sr-only" htmlFor="address">
+              Customer Address
             </label>
-
-            <textarea
-              class="textarea textarea-solid max-w-full"
-              placeholder="Message"
-              rows="8"
-              id="message"
-            ></textarea>
+            <input
+              className="input input-solid max-w-full"
+              placeholder="Enter Customer Address"
+              type="text"
+              id="address"
+            />
           </div>
 
-          <div class="mt-4">
-            <button type="button" class="rounded-lg btn btn-primary btn-block">
-              Send Enquiry
+          <div className="mt-4">
+            <button
+              type="button"
+              className="rounded-lg btn btn-primary btn-block"
+            >
+              Create Customer
             </button>
           </div>
         </form>
@@ -65,7 +81,7 @@ function CreateCustomer() {
   );
 }
 
-export default function DashboardSidePanel() {
+function DashboardSidePanel() {
   return (
     <div className="flex flex-row sm:gap-10">
       <div className="sm:w-full sm:max-w-[18rem]">
@@ -89,7 +105,7 @@ export default function DashboardSidePanel() {
               <section className="menu-section px-4">
                 <span className="menu-title">Main menu</span>
                 <ul className="menu-items">
-                  <li className="menu-item">
+                  <li className="menu-item menu-active">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
@@ -216,16 +232,14 @@ export default function DashboardSidePanel() {
         </div>
 
         <div className="my-4">
-          <CreateCustomer />
-          {/* <div className="flex h-20 w-full items-center justify-center border-2 border-dashed border-border bg-gray-1">
-            <FormField />
-          </div>
-
-          <div className="flex h-40 w-full items-center justify-center border-2 border-dashed border-border bg-gray-1">
-            +
-          </div> */}
+          <CreateCustomerForm />
         </div>
       </div>
     </div>
   );
+}
+
+export default function CreateCustomer() {
+  return <DashboardSidePanel />;
+  d;
 }
