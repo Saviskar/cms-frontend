@@ -1,87 +1,7 @@
-function CreateCustomerForm() {
-  return (
-    <section className="bg-gray-2 rounded-xl border border-slate-700">
-      <div className="p-8 shadow-lg">
-        <form className="space-y-4">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label className="sr-only" htmlFor="phone">
-                Customer Phone Number
-              </label>
-              <input
-                className="input input-solid max-w-full"
-                placeholder="Enter Customer Number"
-                type="tel"
-                id="phone"
-              />
-            </div>
+import { Link } from "react-router-dom";
+import CreateCustomerForm from "./CreateCustomer";
 
-            <div>
-              <label className="sr-only" htmlFor="initial">
-                Title
-              </label>
-              <select className="input input-solid max-w-full" id="initial">
-                <option value="">Select Title</option>
-                <option value="Mr">Mr.</option>
-                <option value="Ms">Ms.</option>
-                <option value="Mrs">Mrs.</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label className="sr-only" htmlFor="name">
-                Customer Name
-              </label>
-              <input
-                className="input input-solid max-w-full"
-                placeholder="Enter Customer Name"
-                type="text"
-                id="name"
-              />
-            </div>
-
-            <div>
-              <label className="sr-only" htmlFor="registered-date">
-                Registered Date
-              </label>
-              <input
-                className="input input-solid max-w-full"
-                placeholder="Select Registered Date"
-                type="date"
-                id="registered-date"
-              />
-            </div>
-          </div>
-
-          <div className="w-full">
-            <label className="sr-only" htmlFor="address">
-              Customer Address
-            </label>
-            <input
-              className="input input-solid max-w-full"
-              placeholder="Enter Customer Address"
-              type="text"
-              id="address"
-            />
-          </div>
-
-          <div className="mt-4">
-            <button
-              type="button"
-              className="rounded-lg btn btn-primary btn-block"
-            >
-              Create Customer
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-  );
-}
-
-function DashboardSidePanel() {
+export default function Navbar() {
   return (
     <div className="flex flex-row sm:gap-10">
       <div className="sm:w-full sm:max-w-[18rem]">
@@ -115,7 +35,7 @@ function DashboardSidePanel() {
                     >
                       <path d="M240-200h133.85v-237.69h212.3V-200H720v-360L480-740.77 240-560v360Zm-60 60v-450l300-225.77L780-590v450H526.15v-237.69h-92.3V-140H180Zm300-330.38Z" />
                     </svg>
-                    <span>General</span>
+                    <span>Dashboard</span>
                   </li>
 
                   <li className="menu-item">
@@ -237,9 +157,4 @@ function DashboardSidePanel() {
       </div>
     </div>
   );
-}
-
-export default function CreateCustomer() {
-  return <DashboardSidePanel />;
-  d;
 }
