@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./pages/Navbar";
-import CreateCustomerForm from "./pages/CreateCustomer";
+import CreateCustomer from "./pages/CreateCustomer";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/test",
-    element: <CreateCustomerForm />,
+    element: <CreateCustomer />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 

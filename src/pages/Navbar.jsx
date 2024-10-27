@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import CreateCustomerForm from "./CreateCustomer";
 
 export default function Navbar() {
   return (
@@ -132,28 +131,6 @@ export default function Navbar() {
             </div>
           </section>
         </aside>
-      </div>
-      <div className="flex w-full flex-col p-4">
-        <div className="w-fit">
-          <label
-            htmlFor="sidebar-mobile-fixed"
-            className="cursor-pointer sm:hidden"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#b8b8b8"
-            >
-              <path d="M140-254.62v-59.99h680v59.99H140ZM140-450v-60h680v60H140Zm0-195.39v-59.99h680v59.99H140Z" />
-            </svg>
-          </label>
-        </div>
-
-        <div className="my-4">
-          <CreateCustomerForm />
-        </div>
       </div>
     </div>
   );
