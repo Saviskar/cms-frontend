@@ -5,6 +5,7 @@ import Navbar from "./pages/Navbar";
 import CreateCustomer from "./pages/CreateCustomer";
 import Dashboard from "./pages/Dashboard";
 import UserLogin from "./pages/UserLogin";
+import PendingOrders from "./pages/PendingOrders";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <UserLogin />,
+  },
+  {
+    path: "/pendingOrders",
+    element: <PendingOrders />,
   },
 ]);
 
