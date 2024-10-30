@@ -27,6 +27,9 @@ function Dashboard() {
 
           <div className="my-4">
             <section className="bg-gray-2 rounded-xl border border-slate-700">
+              <div className="p-4 text-xl font-semibold text-gray-300 border-b border-slate-700">
+                Create Work Order
+              </div>
               <div className="p-8 shadow-lg">
                 <form className="space-y-4">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
