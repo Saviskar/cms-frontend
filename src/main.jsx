@@ -8,6 +8,7 @@ import PendingOrders from "./pages/PendingOrders";
 import CompletedOrders from "./pages/CompletedOrders";
 import CreateCustomer from "./pages/CreateCustomer";
 import Settings from "./pages/Settings";
+import ViewAllCustomers from "./pages/ViewAllCustomers";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/settings",
     element: <Settings />,
+  },
+  {
+    path: "/viewAllCustomers",
+    element: <ViewAllCustomers />,
   },
 ]);
 
