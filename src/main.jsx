@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Navbar from "./pages/Navbar";
 import Dashboard from "./pages/Dashboard";
 import UserLogin from "./pages/UserLogin";
 import PendingOrders from "./pages/PendingOrders";
@@ -13,7 +12,7 @@ import ViewAllCustomers from "./pages/ViewAllCustomers";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />,
+    element: <UserLogin />,
   },
   {
     path: "/createCustomer",
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
-  },
-  {
-    path: "/login",
-    element: <UserLogin />,
   },
   {
     path: "/pendingorders",
