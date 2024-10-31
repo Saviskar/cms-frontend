@@ -1,7 +1,5 @@
 # CMS- CUSTOMER MANAGEMENT SYSTE
 
-# Customer Management System - Frontend
-
 This project is the frontend design of a **Customer Management System** for a computer shop that manages customer interactions, device repair services, and other related workflows. Built using **RippleUI** for UI components and **Vite** with **React** for a fast and efficient development experience.
 
 ## Table of Contents
